@@ -31,15 +31,6 @@ h2 {
     padding-top: 75pt;
 }
 
-h3 {
-    color: rgb(235, 235, 235);
-    font-family: 'Quicksand', sans-serif;
-    font-size: 30pt;
-    font-weight: 400;
-    line-height: 1.56;
-    text-align: center;
-}
-
 .subcontent {
     padding-top: 6pt;
 }
@@ -54,14 +45,6 @@ p{
     font-size: 12pt;
     font-weight: 400;
     line-height: 1.75;
-}
-
-iframe{
-    display: inline-flexbox;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding-top: 10pt;
-
 }
 
 .header {
@@ -185,6 +168,12 @@ body {
 
 .gallery h3{
     display: none;
+    color: rgb(235, 235, 235);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30pt;
+    font-weight: 400;
+    line-height: 1.56;
+    text-align: center;
 }
 
 .image {
@@ -193,6 +182,12 @@ body {
     margin-bottom: 15px;
     box-shadow: 0 0 3px 0 rgba(6, 65, 124, 0.966);
     position: relative;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .gallery:hover img{
@@ -207,13 +202,18 @@ body {
 .image:hover h3{
     display: inherit;
     filter: none;
+    left: 5pt;
+    margin: auto;
+
     position: absolute;
-    bottom: 35%;
-    left: 3.4%;
-    text-align: center;
+    top: 25%;
+    align-self: center;
 }
 
-
+.image:hover .overlay{
+    height: 100%;
+    transform: scale(1.05);
+}
 
 .overlay {
     position: absolute;
@@ -226,30 +226,11 @@ body {
     /*overflow: hidden;*/
 } 
 
-.overlay h3 {
-    position: absolute;
-    bottom: 35%;
-    left: 20%;
-    text-align: center;
-
-}
-
-.image:hover .overlay{
-    height: 100%;
-    transform: scale(1.05);
-}
-
-.image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 @media (max-width: 868px){
 
     h1 {
         padding-top: 40%;
-	    font-size: 28pt;
+        font-size: 28pt;
     }
 
     .header {
